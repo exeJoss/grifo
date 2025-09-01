@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Diario de Grifo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Control Diario de Grifo</h1>
+
+        <div class="section">
+            <h2>Inventario y Ventas (Litros)</h2>
+
+            <h3>Surtidores 1-6</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Combustible</th>
+                            <th>Lectura de Ingreso</th>
+                            <th>Lectura de Salida</th>
+                            <th>Total Litros</th>
+                            <th>Total Venta (S/)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-surtidores-1">
+                        <tr data-combustible="regular" data-precio="13.59">
+                            <td>Regular</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                        <tr data-combustible="premium" data-precio="14.69">
+                            <td>Premium</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                        <tr data-combustible="petroleo" data-precio="14.49">
+                            <td>Petróleo</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                        <tr data-combustible="regular" data-precio="13.59">
+                            <td>Regular</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                        <tr data-combustible="premium" data-precio="14.69">
+                            <td>Premium</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                        <tr data-combustible="petroleo" data-precio="14.49">
+                            <td>Petróleo</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" class="total-label">Total por Cuadro:</td>
+                            <td class="total-por-cuadro" id="total-cuadro-1">0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <br>
+
+            <h3>Surtidores de GLP</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Combustible</th>
+                            <th>Lectura de Ingreso</th>
+                            <th>Lectura de Salida</th>
+                            <th>Total Litros</th>
+                            <th>Total Venta (S/)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-glp">
+                        <tr data-combustible="glp" data-precio="0">
+                            <td>GLP</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                        <tr data-combustible="glp" data-precio="0">
+                            <td>GLP</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                        <tr data-combustible="glp" data-precio="0">
+                            <td>GLP</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                        <tr data-combustible="glp" data-precio="0">
+                            <td>GLP</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" class="total-label">Total por Cuadro:</td>
+                            <td class="total-por-cuadro" id="total-cuadro-2">0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            
+            <br>
+            
+            <h3>Surtidores 7-12</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Combustible</th>
+                            <th>Lectura de Ingreso</th>
+                            <th>Lectura de Salida</th>
+                            <th>Total Litros</th>
+                            <th>Total Venta (S/)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-surtidores-3">
+                        <tr data-combustible="regular" data-precio="13.59">
+                            <td>Regular</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                        <tr data-combustible="premium" data-precio="14.69">
+                            <td>Premium</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                        <tr data-combustible="petroleo" data-precio="14.49">
+                            <td>Petróleo</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                        <tr data-combustible="petroleo" data-precio="14.49">
+                            <td>Petróleo</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                        <tr data-combustible="premium" data-precio="14.69">
+                            <td>Premium</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                        <tr data-combustible="regular" data-precio="13.59">
+                            <td>Regular</td>
+                            <td><input type="number" class="ingreso" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td><input type="number" class="salida" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*"></td>
+                            <td class="total-litros">0.00</td>
+                            <td class="total-venta">0.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" class="total-label">Total por Cuadro:</td>
+                            <td class="total-por-cuadro" id="total-cuadro-3">0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            
+            <br>
+            
+            <div class="form-row">
+                <label for="aceites">Venta de Aceites (S/):</label>
+                <input type="number" id="aceites" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*">
+            </div>
+
+            <div class="total-general">
+                <span>Total de Ventas General:</span>
+                <span id="gran-total-ventas" class="gran-total">0.00</span>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Recaudación (S/)</h2>
+            <div class="form-row">
+                <label for="efectivo">Efectivo Recibido:</label>
+                <input type="number" id="efectivo" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*">
+            </div>
+            <div class="form-row">
+                <label for="vales">Valor Total de Vales:</label>
+                <input type="number" id="vales" step="0.01" inputmode="decimal" pattern="[0-9]*\.?[0-9]*">
+            </div>
+            <div class="total-recaudacion">
+                <span>Total Recaudación:</span>
+                <span id="total-recaudacion">0.00</span>
+            </div>
+        </div>
+
+        <div class="section cuadre-final">
+            <h2>Cuadre Diario</h2>
+            <div id="resultado-cuadre" class="resultado-cuadre">
+                <p>Ingresa los datos para realizar el cuadre.</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="section">
+            <h2>Guardar y Cargar Datos</h2>
+        <div class="form-row">
+            <button id="guardar-ingreso-btn">Guardar Lecturas de Ingreso</button>
+            <input type="file" id="cargar-ingreso-file" style="display:none;">
+            <button id="cargar-ingreso-btn">Cargar Lecturas de Ingreso</button>
+        </div>
+</div>
+
+
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
